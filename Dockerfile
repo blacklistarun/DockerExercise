@@ -13,7 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Docker_Solution.csproj", "."]
+COPY ["Docker_Exercise.csproj", "."]
 RUN dotnet restore "./Docker_Exercise.csproj"
 COPY . .
 WORKDIR "/src/."
